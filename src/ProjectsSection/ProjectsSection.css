@@ -1,0 +1,183 @@
+/* ProjectsSection.css */
+
+/* Main projects section */
+.projects-section {
+    margin-top: -340px;
+    display: flex;
+    justify-content: flex-end; /* Align the card to the right */
+    align-items: flex-start; /* Align items to the top */
+    padding: 20px 80px -150px; /* Reduced top padding for the section */
+}
+.projects-card-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 200px;
+  }
+  
+  .projects-card-button:hover {
+    background-color: #45a049;
+  }
+  
+/* Card styles for projects */
+.projects-card {
+    width: 400px; /* Adjusted width */
+    height: 260px; /* Adjusted height */
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(30, 30, 30, 0.9)); /* Gradient background */
+    border-radius: 15px; /* Rounded corners */
+    border: 4px solid rgb(17, 16, 16); /* Border color */
+    box-shadow: 0 0 30px rgba(17, 17, 17, 0.7); /* Bright shadow */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Arrange elements vertically */
+    justify-content: space-between; /* Space items vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 20px; /* Padding inside the card */
+    margin-left: auto; /* Push card to the right */
+    margin-top: 20px; /* Add some space above the card if needed */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+/* Card hover effect */
+.projects-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+/* Title for projects card */
+.projects-card-title {
+    color: #f6f6f3; /* Gold color for title */
+    font-family: 'Arial', sans-serif; /* Font family */
+    font-size: 24px; /* Font size */
+    margin-bottom: 10px; /* Space below the title */
+}
+.projects-card-button {
+    background-color: transparent; /* Button background */
+    color: white; /* Button text color */
+    border: 1px solid white; /* Button border */
+    border-radius: 5px; /* Button corners */
+    padding: 22px 20px; /* Adjusted button padding */
+    text-align: left; /* Align text to the left */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 5px 0; /* Set a small margin to keep buttons close */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    width: 100%; /* Full width for the button */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center the text vertically */
+}
+
+
+
+.projects-card-button:hover {
+    background-color: white; /* Button background on hover */
+    color: black; /* Button text color on hover */
+}
+/* Styles for the connect section */
+.connect-title {
+    color: white; /* Title color */
+    font-family: 'Arial', sans-serif; /* Font family */
+    font-size: 20px; /* Font size */
+    margin-top: 20px; /* Margin above the connect title */
+}
+
+.connect-links {
+    display: flex; /* Corrected to 'flex' for proper layout */
+    flex-direction:row; /* Stack cards vertically */
+    gap: 50px;
+    padding: 50px 20px;
+    margin-top: -30px;
+}
+
+.link-card {
+    background-color: black; /* Card background color */
+    padding: 15px; /* Inner padding for cards */
+    border-radius: 10px; /* Rounded corners for cards */
+    border: 2px solid white; /* White border around the card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for card effect */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.link-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.connect-link {
+    color: white; /* White link text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+    display: block; /* Block display to fill the card */
+    text-align: center; /* Center text in card */
+}
+
+.connect-link:hover {
+    color: #0073e6; /* Change color on hover */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets (Medium Screens) */
+@media (max-width: 1024px) {
+    .projects-section {
+        height: 500px;
+        margin-left: 500px;
+        display: flex;
+        flex-direction: row; /* Stack elements vertically */
+        align-items: center; /* Center the elements */
+        padding: 20px 30px; /* Adjust padding for smaller screens */
+        margin-top: 0; /* Reset margin for better spacing */
+    }
+
+    .projects-card {
+        flex-direction: column; /* Arrange elements vertically */
+        justify-content: space-between;
+        width: 100%; /* Full width for smaller screens */
+        max-width: 600px; /* Limit the max width */
+        margin-left: 0; /* Center the card */
+        margin-top: 10px; /* Adjust spacing above */
+    }
+
+    .connect-links {
+        flex-direction: row; /* Arrange elements vertically */
+        justify-content: space-between;        gap: 20px; /* Reduce the gap between link cards */
+        padding: 30px 20px; /* Adjust padding */
+        margin-top: 10px; /* Adjust margin */
+    }
+}
+
+/* For Mobile Devices (Small Screens) */
+@media (max-width: 600px) {
+    .projects-section {
+        padding: 15px 10px; /* Reduce padding for small screens */
+    }
+
+    .projects-card {
+        width: 100%; /* Full width */
+        margin-top: 15px; /* Adjust spacing */
+    }
+
+    .projects-card-title {
+        font-size: 20px; /* Reduce font size for titles */
+    }
+
+    .projects-card-button {
+        padding: 15px 10px; /* Adjust button padding */
+        font-size: 16px; /* Reduce font size */
+    }
+
+    .connect-title {
+        font-size: 18px; /* Adjust font size for the title */
+        margin-top: 15px; /* Adjust margin */
+    }
+
+    .link-card {
+        padding: 10px; /* Reduce card padding */
+    }
+
+    .connect-link {
+        font-size: 14px; /* Adjust font size for links */
+    }
+}

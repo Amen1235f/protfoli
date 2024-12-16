@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.Header-container h1 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 900; /* Max weight for Playfair Display is 900 */
+    font-style: normal;
+    color: #fafafa;
+    text-align: center;
+    overflow: hidden; /* Hide words as they animate in */
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Add space between words */
+}
+
+.Header-container h1 span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-100%); /* Start off-screen to the left */
+    animation: slide-in 0.8s forwards ease-out;
+}
+
+.Header-container h1 span:nth-child(1) {
+    animation-delay: 0.3s; /* Delay for the first word */
+}
+
+.Header-container h1 span:nth-child(2) {
+    animation-delay: 0.6s; /* Delay for the second word */
+}
+
+/* Keyframes to slide the words in from left to right */
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Media Queries for Responsiveness */
+
+/* For Medium Screens (Tablets, Smaller Laptops) */
+@media (max-width: 1024px) {
+    .Header-container h1 {
+        font-size: 2.5rem; /* Reduce font size for tablets */
+        gap: 8px; /* Reduce the gap between words */
+    }
+}
+
+/* For Small Screens (Phones) */
+@media (max-width: 600px) {
+    .Header-container h1 {
+        font-size: 2rem; /* Further reduce font size for phones */
+        gap: 5px; /* Reduce the gap even more for smaller screens */
+    }
+
+    .Header-container h1 span {
+        animation-duration: 1s; /* Slow down animation for readability */
+    }
+}

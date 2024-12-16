@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal&display=swap');
+.card-1 {
+    width: 450px; /* Set width */
+    height: 270px; /* Set height */
+    background-color: black; /* Black background */
+    border-radius: 15px; /* Rounded corners */
+    border: 4px solid rgb(17, 16, 16); /* Border color */
+    box-shadow: 0 0 30px rgba(17, 17, 17, 0.7); /* Bright shadow */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Space between children */
+    align-items: flex-start; /* Align text to the left */
+    position: absolute; /* Position the card absolutely */
+    left: 20px; /* Distance from the left */
+    top: 390px; /* Adjust distance from the top as needed */
+    padding: 20px; /* Padding around the content */
+}
+
+/* Description styles */
+.description {
+    color: white; /* Text color */
+    font-family: "Metal", serif;
+    font-size: 16px; /* Font size */
+    line-height: 1.5; /* Line height for spacing */
+    text-align: left; /* Align text to the left */
+    margin-top:30%; /* Push description to the bottom */
+    /* Optional padding to add spacing from the bottom */
+    padding-bottom: 10px; /* Space between text and card bottom */
+}
+/* Responsive Styles */
+
+/* For Tablets (Medium Screens) */
+@media (max-width: 1024px) {
+    .card-1 {
+        width: 80%; /* Adjust width to a percentage for flexibility */
+        height: auto; /* Auto height for better content fit */
+        left: 10px; /* Adjust left position */
+        top: 300px; /* Adjust top position to prevent overlapping */
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .description {
+        font-size: 14px; /* Slightly reduce font size */
+        margin-top: 20%; /* Adjust margin to fit better */
+    }
+}
+
+/* For Mobile Devices (Small Screens) */
+@media (max-width: 600px) {
+    .card-1 {
+        width: 90%; /* Full width for mobile devices */
+        height: auto; /* Auto height for flexibility */
+        left: 5px; /* Adjust left position */
+        top: 250px; /* Adjust top position */
+        padding: 10px; /* Further reduce padding for better fit */
+    }
+
+    .description {
+        font-size: 12px; /* Reduce font size further for smaller screens */
+        margin-top: 10%; /* Adjust margin for proper spacing */
+    }
+}

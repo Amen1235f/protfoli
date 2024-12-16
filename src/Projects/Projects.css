@@ -1,0 +1,122 @@
+/* Container for project cards */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center cards horizontally */
+    max-width: 1200px; /* Set max width */
+    margin: 0 auto; /* Center container */
+    padding: 62px 20px; /* Add padding */
+  }
+  
+  /* Project card styles with reduced initial width */
+  .project-card {
+    color: white;
+    width: 200px; /* Reduced initial width */
+    height: 600px; /* Keep the height the same */
+    margin: 10px; /* Margin between cards */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Position for the hover effect */
+    border: 1px solid #ccc; /* Optional border */
+    transition: transform 0.3s ease, width 0.3s ease; /* Smooth transition for both transform and width */
+    text-align: center; /* Center text */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow */
+    transform-origin: center; /* Center the scaling effect */
+    animation: float 4s ease-in-out infinite; /* Add floating animation */
+  }
+  
+  /* Hover effect: enlarge the card smoothly */
+  .project-card:hover {
+    transform: scale(1.1); /* Slightly enlarge the card on hover */
+    width: 300px; /* Expand the width smoothly */
+    z-index: 10; /* Bring card to the front */
+    animation-play-state: paused; /* Pause the floating animation on hover */
+  }
+  
+  /* Floating animation keyframes */
+  @keyframes float {
+    0% {
+      transform: translateY(0); /* Start at the original position */
+    }
+    50% {
+      transform: translateY(-10px); /* Move the card slightly upwards */
+    }
+    100% {
+      transform: translateY(0); /* Return to the original position */
+    }
+  }
+  
+  
+  .project-image {
+    width: 150%; /* Full width for images */
+    height: 70%; /* Set height for images */
+    object-fit: cover; /* Maintain aspect ratio */
+    transition: all 0.8s ease-in-out; /* Smooth transition */
+  }
+  
+  .image-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slide-fade {
+    opacity: 0;
+    transform: translateX(20px); /* Start the slide from the right */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth slide and fade effect */
+  }
+  
+  .project-card:hover .project-image {
+    opacity: 1; /* Fade effect */
+    transform: translateX(0); /* Slide into view */
+  }
+  
+  .project-title {
+    font-size: 1.1em; /* Adjusted title size */
+    margin: 5px 0; /* Margin above and below title */
+  }
+  
+  .project-description {
+    padding: 0 10px; /* Add horizontal padding */
+    font-size: 0.9em; /* Smaller font size for description */
+  }
+  
+  /* AOS animations */
+  [data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+  }
+  
+  [data-aos].aos-animate {
+    opacity: 1;
+  }
+  
+  .slideshow-container {
+    position: relative; /* Position relative for absolute positioning of buttons */
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute; /* Position absolute to place buttons over the image */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for better centering */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Increase padding for better usability */
+    font-size: 20px; /* Increase font size */
+    z-index: 1; /* Bring buttons in front of the image */
+    border-radius: 50%; /* Round button edges */
+    transition: background-color 0.3s ease; /* Smooth button hover transition */
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Darker background on hover */
+  }
+  
+  .prev {
+    left: 10px; /* Position on the left */
+  }
+  
+  .next {
+    right: 10px; /* Position on the right */
+  }
+  

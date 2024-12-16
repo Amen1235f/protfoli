@@ -1,0 +1,95 @@
+/* Card styles */
+.card {
+    width: 380px;
+    height: 300px;
+    background-color: black; /* Black background */
+    border-radius: 15px; /* Rounded corners */
+    border: 4px solid rgb(17, 16, 16); /* White border */
+    box-shadow: 0 0 30px rgba(17, 17, 17, 0.7); /* Shadow for the card */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative;
+    left: 36%; 
+    top: 70%; /* Adjusted to move the card higher */
+}
+
+/* Galaxy circle container */
+.galaxy-circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Galaxy circle styles */
+.galaxy-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    background-color: transparent; /* Transparent center */
+    border: 5px solid grey; /* Grey border for the circle */
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 255, 0.3); /* Soft glow effect */
+    animation: pulse 6s infinite ease-in-out; /* Animation for subtle pulse effect */
+}
+
+/* Lens wave effect */
+.galaxy-circle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px; /* Larger than the main circle */
+    height: 200px; 
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Faint white border for outer wave */
+    transform: translate(-50%, -50%);
+    animation: lens-wave 10s infinite linear; /* Animation for rotating wave effect */
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 50px rgba(255, 255, 255, 0.7), 0 0 70px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* Lens wave animation */
+@keyframes lens-wave {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+@media (max-width: 600px) {
+    .card {
+        width: 90%; /* Almost full width of the screen */
+        height: auto; /* Allow height to adjust automatically */
+        top: 20%; /* Adjust top positioning */
+    }
+
+    .galaxy-circle {
+        width: 100px; /* Smaller circle size */
+        height: 100px;
+    }
+
+    .galaxy-circle::before {
+        width: 150px; /* Adjust wave size for smaller screens */
+        height: 150px;
+    }
+}

@@ -1,0 +1,134 @@
+/* Contact.css */
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Metal&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Metal&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+.contact-card {
+    width: 430px; /* Set width */
+    height: 267px; /* Set height */
+    background-color: #a8a198; /* Light brown background */
+    border-radius: 15px; /* Rounded corners */
+    border: 4px solid rgb(17, 16, 16); /* Border color */
+    box-shadow: 0 0 30px rgba(17, 17, 17, 0.7); /* Bright shadow */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Space between header and footer */
+    position: absolute; /* Position the card absolutely */
+    left: 520px; /* Distance from the left */
+    top: 390px; /* Adjust this value to position below other sections */
+    padding: 25px 30px; /* Padding around the content */
+}
+
+/* Header styles */
+.contact-header {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between title and arrow */
+    align-items: center; /* Center items vertically */
+}
+
+/* Description styles */
+/* Contact.css */
+.contact-description {
+    color: white; /* Text color */
+    font-family: "Hubballi", sans-serif; /* Updated font family */
+    font-weight: 400; /* Normal font weight */
+    font-style: normal; /* Normal font style */
+    font-size: 18px; /* Font size */
+    line-height: 1.5; /* Line height for spacing */
+    margin-top: -2px; /* Move the text higher by reducing top margin */
+    margin-bottom: 10px;
+    text-decoration: underline; /* Add some space below the text */
+}
+
+/* Arrow icon styles */
+.arrow-icon {
+    margin-top: -19px;
+    width: 30px; /* Set width for arrow */
+    height: 30px; /* Set height for arrow */
+}
+
+/* Contact Us styles */
+
+
+/* Title styles */
+.contact-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+        font-size: 50px; /* Font size for "Contact" */
+}
+
+/* Us styles */
+/* Contact.css */
+.contact-us {
+    color: white; /* Text color */
+    font-family: 'Arial', sans-serif; /* Font family */
+    text-align: left; /* Align text to the left */
+    display: flex; /* Use flexbox to align items */
+    align-items: baseline; /* Align items at baseline */
+    margin-bottom: 0; 
+    font-size: 30px;/* Remove bottom margin */
+}
+
+.contact-us-italic {
+    font-family: 'Arial', sans-serif; /* Font family */
+    font-style: italic; /* Italic text */
+    margin-left: 10px; /* Space between "Contact" and "Us" */
+}
+/* Contact.css */
+/* Existing styles remain unchanged */
+
+/* Media Queries for Responsiveness */
+
+/* For Medium Screens (Tablets, Smaller Laptops) */
+@media (max-width: 554px) {
+    .contact-card {
+        left: 20%; /* Center the card horizontally */
+        transform: translateX(-50%); /* Adjust for centering */
+        width:500px; /* Reduce the width */
+        top: 300px; /* Adjust the top position */
+        padding: 20px; /* Adjust padding for a more compact look */
+    }
+
+    .contact-title {
+        font-size: 40px; /* Reduce font size for title */
+    }
+
+    .contact-description {
+        font-size: 16px; /* Adjust font size */
+    }
+
+    .arrow-icon {
+        width: 25px; /* Reduce size of the arrow */
+        height: 25px;
+    }
+
+    .contact-us {
+        font-size: 26px; /* Adjust font size */
+    }
+}
+
+/* For Small Screens (Phones) */
+@media (max-width: 500px) {
+    .contact-card {
+        width: 500px; /* Almost full width of the screen */
+        left: 50%; /* Center the card horizontally */
+        transform: translateX(-50%); /* Center adjustment */
+        top: 200px; /* Further adjust the top position */
+        padding: 15px; /* Compact padding */
+    }
+
+    .contact-title {
+        font-size: 30px; /* Further reduce font size for title */
+    }
+
+    .contact-description {
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .arrow-icon {
+        width: 20px; /* Smaller arrow icon */
+        height: 20px;
+    }
+
+    .contact-us {
+        font-size: 20px; /* Smaller font size for text */
+    }
+}
